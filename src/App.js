@@ -10,6 +10,11 @@ const App = () => {
   return (
     <Fragment>
       <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Tours />
+      <Footer />
     </Fragment>
   );
 };
