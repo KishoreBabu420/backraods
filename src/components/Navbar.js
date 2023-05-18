@@ -4,7 +4,13 @@ import SocialLinks from './SocialLinks';
 
 import { pageLinks, socialLinks } from '../data';
 
+import { useState } from 'react';
+
 const Navbar = () => {
+  const [isShowLinks, setIsShowLinks] = useState(false);
+  const navLinksToggler = () => {
+    setIsShowLinks((isShowLinks) => !isShowLinks);
+  };
   return (
     <nav className='navbar'>
       <div className='nav-center'>
@@ -18,6 +24,7 @@ const Navbar = () => {
             type='button'
             className='nav-toggle'
             id='nav-toggle'
+            onClick={navLinksToggler}
           >
             <i className='fas fa-bars'></i>
           </button>
@@ -25,7 +32,7 @@ const Navbar = () => {
         {/* <!-- left this comment on purpose --> */}
         <PageLinks
           pageLinks={pageLinks}
-          parentClass='nav-links'
+          parentClass={isShowLinks ? 'nav-links show-links' : 'nav-links'}
           itemClass='nav-link'
         />
         <SocialLinks

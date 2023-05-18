@@ -233,6 +233,7 @@ About
   .about-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
   .about-img,
@@ -337,6 +338,7 @@ Featured Tours
 }
 .tour-img {
   height: 15rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .tour-date {
@@ -511,6 +513,10 @@ Navbar
 }
 .show-links {
   height: 280px;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: #fff;
 }
 /* nav at bigger screen size */
 @media screen and (min-width: 992px) {
