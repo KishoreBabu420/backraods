@@ -1,15 +1,15 @@
 import React from 'react';
 
-const SocialLinks = ({ socialLinks }) => {
+const SocialLinks = ({ socialLinks, itemClass, parentClass }) => {
   return (
-    <ul className='nav-icons'>
+    <ul className={parentClass}>
       {socialLinks.map(({ id, href, icon }) => (
         <li key={id}>
           <a
             href={href}
             target='_blank'
             rel='noreferrer'
-            className='nav-icon'
+            className={itemClass}
           >
             <i className={icon}></i>
           </a>

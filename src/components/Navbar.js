@@ -23,8 +23,16 @@ const Navbar = () => {
           </button>
         </div>
         {/* <!-- left this comment on purpose --> */}
-        <PageLinks pageLinks={pageLinks} />
-        <SocialLinks socialLinks={socialLinks} />
+        <PageLinks
+          pageLinks={pageLinks}
+          parentClass='nav-links'
+          itemClass='nav-link'
+        />
+        <SocialLinks
+          socialLinks={socialLinks}
+          parentClass='nav-icons'
+          itemClass='nav-icon'
+        />
       </div>
     </nav>
   );

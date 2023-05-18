@@ -1,9 +1,9 @@
 import React from 'react';
 
-const PageLinks = ({ pageLinks }) => {
+const PageLinks = ({ pageLinks, itemClass, parentClass }) => {
   return (
     <ul
-      className='nav-links'
+      className={parentClass}
       id='nav-links'
     >
       {pageLinks.map(({ id, href, text }) => {
@@ -11,7 +11,7 @@ const PageLinks = ({ pageLinks }) => {
           <li key={id}>
             <a
               href={href}
-              className='nav-link'
+              className={itemClass}
             >
               {text}
             </a>
